@@ -27,3 +27,23 @@ var greeting = function (user) {
 var greetingAgain = function (user) {
     console.log(user.name + " says hello");
 };
+//function signatures
+var welcome;
+welcome = function (name, greeting) {
+    console.log(name + " says " + greeting);
+};
+//
+var calc;
+calc = function (numOne, numTwo, action) {
+    if (action === "add") {
+        return numOne + numTwo;
+    }
+    else {
+        return numOne - numTwo;
+    }
+};
+//
+var logDetails;
+logDetails = function (ninja) {
+    console.log(ninja.name + " is " + ninja.age + " years old");
+};
