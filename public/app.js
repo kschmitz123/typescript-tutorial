@@ -14,10 +14,13 @@ form.addEventListener("submit", function (e) {
 });
 //classes
 var Invoice = /** @class */ (function () {
-    function Invoice(c, d, a) {
-        this.client = c;
-        this.details = d;
-        this.amount = a;
+    //   readonly client: string;
+    //   private details: string;
+    //   public amount: number;
+    function Invoice(client, details, amount) {
+        this.client = client;
+        this.details = details;
+        this.amount = amount;
     }
     Invoice.prototype.format = function () {
         return this.client + " ows \u20AC" + this.amount + " for " + this.details;
@@ -28,3 +31,8 @@ var invOne = new Invoice("mario", "work", 20);
 var invTwo = new Invoice("luigi", "work", 30);
 //only objects of class Invoice can be added to array
 var invoices = [];
+invoices.push(invOne);
+invoices.push(invTwo);
+invoices.forEach(function (inv) {
+    console.log(inv.client, inv.amount, inv.format());
+});
