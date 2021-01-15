@@ -21,4 +21,9 @@ var result = minus(10, 7);
 var plus = function (a, b) {
     return a + b;
 };
-//return type void if function doesnt return anything
+var greeting = function (user) {
+    console.log(user.name + " says hello");
+};
+var greetingAgain = function (user) {
+    console.log(user.name + " says hello");
+};

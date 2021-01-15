@@ -27,3 +27,13 @@ const plus = (a: number, b: number): number => {
 };
 
 //return type void if function doesnt return anything
+
+type StringOrNum = string | number;
+type objWithName = { name: string; uid: StringOrNum };
+
+const greeting = (user: objWithName) => {
+  console.log(`${user.name} says hello`);
+};
+const greetingAgain = (user: objWithName) => {
+  console.log(`${user.name} says hello`);
+};
