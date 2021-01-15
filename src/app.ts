@@ -1,5 +1,31 @@
 import { Invoice } from "./classes/Invoice.js";
 
+//interfaces
+interface IsPerson {
+  name: string;
+  age: number;
+  speak(a: string): void;
+  spend(a: number): number;
+}
+
+const me: IsPerson = {
+  name: "kathrin",
+  age: 27,
+  speak(text: "hallo") {
+    console.log(text);
+  },
+  spend(amount: number) {
+    console.log("I spent", amount);
+    return amount;
+  },
+};
+
+const greetPerson = (person: IsPerson) => {
+  console.log("hello", person.name);
+};
+
+greetPerson(me);
+
 const form = document.querySelector(".new-item-form") as HTMLFormElement;
 const type = document.querySelector("#type") as HTMLSelectElement;
 const tofrom = document.querySelector("#tofrom") as HTMLInputElement;
