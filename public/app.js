@@ -1,19 +1,13 @@
 import { Invoice } from "./classes/Invoice.js";
-const me = {
-    name: "kathrin",
-    age: 27,
-    speak(text) {
-        console.log(text);
-    },
-    spend(amount) {
-        console.log("I spent", amount);
-        return amount;
-    },
-};
-const greetPerson = (person) => {
-    console.log("hello", person.name);
-};
-greetPerson(me);
+import { Payment } from "./classes/Payment.js";
+let docOne;
+let docTwo;
+docOne = new Invoice("yoshi", "web work", 250);
+docTwo = new Payment("mario", "plumbing work", 250);
+let docs = [];
+docs.push(docOne);
+docs.push(docTwo);
+console.log(docs);
 const form = document.querySelector(".new-item-form");
 const type = document.querySelector("#type");
 const tofrom = document.querySelector("#tofrom");

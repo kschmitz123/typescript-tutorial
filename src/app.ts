@@ -1,30 +1,18 @@
 import { Invoice } from "./classes/Invoice.js";
+import { Payment } from "./classes/Payment.js";
+import { hasFormatter } from "./interfaces/hasFormatter";
 
-//interfaces
-interface IsPerson {
-  name: string;
-  age: number;
-  speak(a: string): void;
-  spend(a: number): number;
-}
+let docOne: hasFormatter;
+let docTwo: hasFormatter;
 
-const me: IsPerson = {
-  name: "kathrin",
-  age: 27,
-  speak(text: "hallo") {
-    console.log(text);
-  },
-  spend(amount: number) {
-    console.log("I spent", amount);
-    return amount;
-  },
-};
+docOne = new Invoice("yoshi", "web work", 250);
+docTwo = new Payment("mario", "plumbing work", 250);
 
-const greetPerson = (person: IsPerson) => {
-  console.log("hello", person.name);
-};
+let docs: hasFormatter[] = [];
+docs.push(docOne);
+docs.push(docTwo);
 
-greetPerson(me);
+console.log(docs);
 
 const form = document.querySelector(".new-item-form") as HTMLFormElement;
 const type = document.querySelector("#type") as HTMLSelectElement;
