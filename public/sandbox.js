@@ -1,3 +1,4 @@
+"use strict";
 var character = "Mario";
 var age = 30;
 var circ = function (diameter) {
@@ -14,7 +15,7 @@ mixed.push("blubb");
 var ninja = {
     name: "mario",
     belt: "black",
-    age: 30
+    age: 30,
 };
 ninja.age = 40;
 // ninja.age = "hallo"
@@ -22,7 +23,7 @@ ninja.age = 40;
 ninja = {
     name: "luigi",
     belt: "orange",
-    age: 20
+    age: 20,
 };
 // EXPLICIT TYPES
 var hobby;
@@ -44,10 +45,15 @@ mix2 = 23;
 var ninjaOne;
 ninjaOne = { name: "yoshi", age: 36 };
 var ninjaTwo;
+ninjaTwo = {
+    name: "hugo",
+    age: 25,
+    belt: "black",
+};
 // ANY TYPES
 var house = 35;
 house = "hotel";
 house = true;
-var mixedArr;
+var mixedArr = [];
 mixedArr.push("hallo");
 mixedArr.push(false);

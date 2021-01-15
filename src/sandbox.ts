@@ -61,12 +61,18 @@ let ninjaTwo: {
   age: number;
   belt: string;
 };
+ninjaTwo = {
+  name: "hugo",
+  age: 25,
+  belt: "black",
+  // hobby: "fight"
+};
 
 // ANY TYPES
 let house: any = 35;
 house = "hotel";
 house = true;
 
-let mixedArr: any[];
+let mixedArr: any[] = [];
 mixedArr.push("hallo");
 mixedArr.push(false);
