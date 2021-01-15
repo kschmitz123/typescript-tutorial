@@ -1,40 +1,39 @@
 "use strict";
-var greet;
+let greet;
 // greet = "hello"
-greet = function () {
+greet = () => {
     console.log("hello");
 };
 // ? makes value optional
 // or define default value
 // always put optional parameters at end
-var add = function (a, b, c) {
-    if (c === void 0) { c = 10; }
+const add = (a, b, c = 10) => {
     console.log(a + b);
 };
 add(3, 4);
-var minus = function (a, b) {
+const minus = (a, b) => {
     return a + b;
 };
 //result now automatically is type  number
-var result = minus(10, 7);
+let result = minus(10, 7);
 //define return type explicitly
-var plus = function (a, b) {
+const plus = (a, b) => {
     return a + b;
 };
-var greeting = function (user) {
-    console.log(user.name + " says hello");
+const greeting = (user) => {
+    console.log(`${user.name} says hello`);
 };
-var greetingAgain = function (user) {
-    console.log(user.name + " says hello");
+const greetingAgain = (user) => {
+    console.log(`${user.name} says hello`);
 };
 //function signatures
-var welcome;
-welcome = function (name, greeting) {
-    console.log(name + " says " + greeting);
+let welcome;
+welcome = (name, greeting) => {
+    console.log(`${name} says ${greeting}`);
 };
 //
-var calc;
-calc = function (numOne, numTwo, action) {
+let calc;
+calc = (numOne, numTwo, action) => {
     if (action === "add") {
         return numOne + numTwo;
     }
@@ -43,7 +42,7 @@ calc = function (numOne, numTwo, action) {
     }
 };
 //
-var logDetails;
-logDetails = function (ninja) {
-    console.log(ninja.name + " is " + ninja.age + " years old");
+let logDetails;
+logDetails = (ninja) => {
+    console.log(`${ninja.name} is ${ninja.age} years old`);
 };
