@@ -20,3 +20,14 @@ form.addEventListener("submit", (e) => {
     }
     list.render(doc, type.value, "end");
 });
+const docOne = {
+    uid: 1,
+    resource: "hallo",
+    data: { name: "kathrin" },
+};
+const docTwo = {
+    uid: 2,
+    resource: "hallo",
+    data: ["hallo"],
+};
+console.log(docOne, docTwo);

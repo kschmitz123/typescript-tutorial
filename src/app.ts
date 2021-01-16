@@ -25,3 +25,23 @@ form.addEventListener("submit", (e: Event) => {
 
   list.render(doc, type.value, "end");
 });
+
+//GENERICS
+interface Resource<T> {
+  uid: number;
+  resource: string;
+  data: T;
+}
+
+const docOne: Resource<object> = {
+  uid: 1,
+  resource: "hallo",
+  data: { name: "kathrin" },
+};
+
+const docTwo: Resource<string[]> = {
+  uid: 2,
+  resource: "hallo",
+  data: ["hallo"],
+};
+console.log(docOne, docTwo);
