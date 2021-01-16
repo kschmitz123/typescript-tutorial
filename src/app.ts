@@ -26,22 +26,30 @@ form.addEventListener("submit", (e: Event) => {
   list.render(doc, type.value, "end");
 });
 
-//GENERICS
+//ENUMS
+enum ResourceType {
+  BOOK,
+  AUTHOR,
+  FILM,
+  DIRECTOR,
+  PERSON,
+}
+
 interface Resource<T> {
   uid: number;
-  resource: string;
+  resource: ResourceType;
   data: T;
 }
 
 const docOne: Resource<object> = {
   uid: 1,
-  resource: "hallo",
+  resource: ResourceType.BOOK,
   data: { name: "kathrin" },
 };
 
 const docTwo: Resource<string[]> = {
   uid: 2,
-  resource: "hallo",
+  resource: ResourceType.PERSON,
   data: ["hallo"],
 };
 console.log(docOne, docTwo);
